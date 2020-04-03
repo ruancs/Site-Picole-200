@@ -1,6 +1,7 @@
 
 /*seletor!*/
 body{
+    animation: fadein 2s;
     background-color: rgb(227, 140, 230);
     background-image: url(bg.jpg);
     width: 100%;
