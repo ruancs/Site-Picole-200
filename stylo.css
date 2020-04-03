@@ -27,8 +27,8 @@ h1{
 
 .picole{
     display:block;
-    word-spacing: -0.1em;
-    font-family:comic-sans;
+    letter-spacing: 0.1em;
+    font-family: 'Spicy Rice', cursive;
     color:rgb(255, 255, 255);
     font-size:2.8em;
     text-align: center;
@@ -64,7 +64,7 @@ a{
 }
 
 div p{
-    display: inline;
+    
     position:absolute;
     margin-top: 1em;
     font-size: 1.2em;
@@ -78,10 +78,10 @@ div p{
     
 }
 @keyframes p{
-    0%{opacity: 0;}
-    50%{opacity: .5;}
     100%{opacity: 1;}
-
+    50%{opacity: .5;}
+    0%{opacity: 0;} 
+    
 }
 
 
