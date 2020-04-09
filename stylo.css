@@ -1,5 +1,4 @@
 
-/*seletor!*/
 body{
     animation: fadein 2s;
     background-color: rgb(227, 140, 230);
@@ -9,6 +8,7 @@ body{
 }
 
 h1{
+    text-shadow: 1px 2px 2px #111111;
     text-align: center;
     color: lavender;
     font-family:comic-sans;
@@ -25,9 +25,9 @@ h1{
     
 }
 
-
 .picole{
     display:block;
+    text-shadow: 3px 3px 2px #111111;
     letter-spacing: 0.1em;
     font-family: 'Spicy Rice', cursive;
     color:rgb(255, 255, 255);
@@ -44,6 +44,7 @@ a{
 }
 
 .estoque{
+    text-shadow: 3px 0.5px 2px #111111;
     color:rgb(255, 255, 255);
     display:block;
     text-transform: uppercase;
@@ -56,12 +57,12 @@ a{
     width:85% ;
     height: 500px;
     background-color: rgb(216, 216, 216, 0.5);
-    margin-top: 1em;
+    padding:1em;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    
-       
+    /*box-shadow: #000 3px 4px 8px;*/
+
 }
 
 div p{
@@ -85,8 +86,6 @@ div p{
     
 }
 
-
-
 .lista{
     position: absolute;
     margin-top: 5em;
@@ -96,4 +95,19 @@ div p{
     font-family: comic-sans;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+table, th, td{
+  width: 24em;
+  margin-top: 4em;
+  margin-left: 1em;
+  text-align: center;
+  border:4px solid white;
+  border-collapse: collapse;
+  border-radius: 0.5em;
+}
+
+
+th, td{
+    padding:0.5em;
 }
