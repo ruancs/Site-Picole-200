@@ -1,8 +1,4 @@
 # Site-Picole-200
-<i>## Developed by Ruan ##<br/>	
-[LinkedIn](https://www.linkedin.com/in/ruancsc/)<br/>
-[Instagram](https://www.instagram.com/ruanksc/)</i>
-
 <b><h3>Todo o projeto foi/será feito sem utilização de Frameworks!</b></h3>
 	
 - <i>Versão teste e em desenvolvimento</i><br/>
@@ -14,5 +10,7 @@ Aplicação web com interface simples para gerenciar um estoque de picolés, div
 
 	+ Abaixo haverá um histórico dos mais recentemente vendidos listados por data e hora da venda.
 
-
+Meu [LinkedIn](https://www.linkedin.com/in/ruancsc/)<br/>
+Meu [Instagram](https://www.instagram.com/ruanksc/)</i><br/>
+:)
   
