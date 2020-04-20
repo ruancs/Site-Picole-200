@@ -28,11 +28,11 @@
 
             <ul class="div1">
 
-                <img src="Ruan.jpeg" width="100px" class="Ruan"></img>
+                <img src="Ruan.jpeg" width="50px" class="Ruan"></img>
 
                 <li class="picole">
                 
-                    <b><a href="http://192.168.1.18:5500/index.html">PICOLÉ 200</a></b>
+                    <b>PICOLÉ 200</b>
 
                 </li>
 
@@ -46,10 +46,53 @@
         
         <div class="main">
 
-        <p>Estoque: <br></p>
+        
+
+            
+                <input type ="button" value = "venda" id = "venda" onclick="exibe();">
+            
+                <script type="text/javascript">
+                    var visibilidade = true;                  
+                                       
+
+                    function exibe(){
+                        if (visibilidade) {
+                            document.getElementById("vendeu").style.display = "none";
+                            visibilidade = false;
+                        }
+                        else {
+                            document.getElementById("vendeu").style.display = "block";
+                            visibilidade = true;
+                        }
+                    }
+
+                </script>
+
+
+                <div id = "vendeu">
+                        <form action=" ">
+                          <label for="sabores"> SABOR: </label>
+                            <select id="sabor">
+                                <option value="chocolate">chocolate</option>
+                                <option value="limão">limão</option>
+                                <option value="uva">uva</option>
+                                <option value="açaí">açaí</option>
+                                <option value="napolitano">napolitano</option>
+                                <option value="flocos">flocos</option>               
+                            </select>
+                            
+                        </form> 
+                        <form action="">
+                            <label for="quantidade">QUANTIDADE: </label>
+                            <input type="number" id ="quant" min="0">
+                        </form>
+                <input type ="submit" value ="confirmar" id="conf">
+                </div>
+            
+            <p>Estoque: <br></p>
                 
             <table>
-
+    
                 <tr>
                     <th>SABOR</th>
                    
@@ -64,14 +107,16 @@
                     <td>Flocos</td>
                     <td>3</td>
                 </tr>
+                <tr>
+                    <td>Limão</td>
+                    <td>4</td>
+                </tr>
 
 
             </table>
     
             <form></form>
-            <ul class="lista">
-
-                
+            <ul class="lista">                
                 <li>Adicionados recentemente: </li><br>
             </ul>    
 
