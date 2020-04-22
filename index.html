@@ -46,12 +46,9 @@
         
         <div class="main">
 
-        
-
-            
                 <input type ="button" value = "venda" id = "venda" onclick="exibe();">
             
-                <script type="text/javascript">
+                <script type="text/javascript"> //abrir formulario oculto//
                     var visibilidade = true;                  
                                        
 
@@ -63,10 +60,19 @@
                         else {
                             document.getElementById("vendeu").style.display = "block";
                             visibilidade = true;
-                        }
+                        } 
+                        
+                    }
+                    function firmou(){
+                        document.getElementById("conf").style.background = "#3a0647";
+                        alert("registrado!")
+                        window.location.reload();
                     }
 
-                </script>
+                       
+
+
+                </script> 
 
 
                 <div id = "vendeu">
@@ -82,11 +88,13 @@
                             </select>
                             
                         </form> 
+
                         <form action="">
                             <label for="quantidade">QUANTIDADE: </label>
                             <input type="number" id ="quant" min="0">
                         </form>
-                <input type ="submit" value ="confirmar" id="conf">
+
+                <input type ="submit" value ="confirmar" id="conf" onclick="firmou();">
                 </div>
             
             <p>Estoque: <br></p>
@@ -119,13 +127,5 @@
             <ul class="lista">                
                 <li>Adicionados recentemente: </li><br>
             </ul>    
-
-        <form                        
-
-
-        </div>
-
-       
-
     </body>
 </html>
