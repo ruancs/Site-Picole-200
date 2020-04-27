@@ -53,21 +53,33 @@
                                        
 
                     function exibe(){
+
                         if (visibilidade) {
                             document.getElementById("vendeu").style.display = "none";
                             visibilidade = false;
-                        }
-                        else {
+                        } else {
                             document.getElementById("vendeu").style.display = "block";
                             visibilidade = true;
                         } 
                         
                     }
+
                     function firmou(){
+
                         document.getElementById("conf").style.background = "#3a0647";
-                        alert("registrado!")
-                        window.location.reload();
+
+                        var qt = document.getElementById("quant").value;
+
+                        if (qt == 0 ) {
+                            document.querySelector("#alerta").innerText = "Digite a quantidade";
+                        } else{
+                            alert("REGISTRADO!");
+                            window.location.reload();
+                        }
                     }
+
+
+
 
                        
 
@@ -92,6 +104,7 @@
                         <form action="">
                             <label for="quantidade">QUANTIDADE: </label>
                             <input type="number" id ="quant" min="0">
+                            <div id="alerta"></div>
                         </form>
 
                 <input type ="submit" value ="confirmar" id="conf" onclick="firmou();">
