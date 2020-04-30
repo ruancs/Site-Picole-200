@@ -50,7 +50,7 @@
             
                 <script type="text/javascript"> //abrir formulario oculto//
                     var visibilidade = true;                  
-                                       
+                                                        
 
                     function exibe(){
 
@@ -71,11 +71,24 @@
                         var qt = document.getElementById("quant").value;
 
                         if (qt == 0 ) {
-                            document.querySelector("#alerta").innerText = "Digite a quantidade";
+                            document.querySelector("#alerta").innerText = "Digite a quantidade!";
                         } else{
-                            alert("REGISTRADO!");
+                            var select = document.getElementById('sabor');
+                            var sabsel = select.options[select.selectedIndex].value;
+                            var quant_vend = document.getElementById('quant');
+                            nova_venda = new Vender()
+                            alert("Venda Registrada! sabor: " + sabsel + " Quantidade: " + qt);
+                            
                             window.location.reload();
                         }
+                    }                               
+
+                    //objetos
+                    function Vender(sabor, quantidade){
+                        this.sabor = sabor;
+                        this.quantidade = quantidade;
+
+
                     }
 
 
@@ -91,14 +104,16 @@
                         <form action=" ">
                           <label for="sabores"> SABOR: </label>
                             <select id="sabor">
-                                <option value="chocolate">chocolate</option>
-                                <option value="limão">limão</option>
-                                <option value="uva">uva</option>
-                                <option value="açaí">açaí</option>
-                                <option value="napolitano">napolitano</option>
-                                <option value="flocos">flocos</option>               
+                                <option value="açaí">Açaí</option>
+                                <option value="amendoin">Amendoin</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="coco">Coco</option>
+                                <option value="flocos">Flocos</option>
+                                <option value="limão">Limão</option>
+                                <option value="maracuja">Maracujá</option>
+                                <option value="napolitano">Napolitano</option>
+                                <option value="uva">Uva</option>            
                             </select>
-                            
                         </form> 
 
                         <form action="">
@@ -107,33 +122,28 @@
                             <div id="alerta"></div>
                         </form>
 
-                <input type ="submit" value ="confirmar" id="conf" onclick="firmou();">
+                <input type ="submit" value ="CONFIRMAR" id="conf" onclick="firmou();">
                 </div>
             
             <p>Estoque: <br></p>
                 
             <table>
-    
-                <tr>
-                    <th>SABOR</th>
-                   
-                    <th>QUANTIDADE</th>
                 
-                </tr>
-                <tr>
-                    <td>Chocolate</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Flocos</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Limão</td>
-                    <td>4</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>SABOR</th>                    
+                        <th>QUANTIDADE</th>                    
+                    </tr>                                 
+                </thead>
+
+            <tbody>
+                <td>açaí</td>
+                <td>2</td>
 
 
+            </tbody>
+    
+                
             </table>
     
             <form></form>
