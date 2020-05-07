@@ -76,7 +76,6 @@
                             var select = document.getElementById('sabor');
                             var sabsel = select.options[select.selectedIndex].value;
                             var quant_vend = document.getElementById('quant');
-                            nova_venda = new Vender()
                             alert("Venda Registrada! sabor: " + sabsel + " Quantidade: " + qt);
                             
                             window.location.reload();
@@ -87,16 +86,8 @@
                     function Vender(sabor, quantidade){
                         this.sabor = sabor;
                         this.quantidade = quantidade;
-
-
                     }
-
-
-
-
-                       
-
-
+        
                 </script> 
 
 
@@ -136,7 +127,7 @@
                     </tr>                                 
                 </thead>
 
-            <tbody>
+            <tbody id ="tbl">
                 <td>açaí</td>
                 <td>2</td>
 
