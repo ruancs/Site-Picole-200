@@ -46,13 +46,10 @@
         
         <div class="main">
 
-                <input type ="button" value = "venda" id = "venda" onclick="exibe();">
-            
-                <script type="text/javascript"> //abrir formulario oculto//
-                    var visibilidade = true;                  
-                                                        
+                <script type="text/javascript"> 
+                    var visibilidade = true;                                             
 
-                    function exibe(){
+                    function exibe(){// exibir form oculto //
 
                         if (visibilidade) {
                             document.getElementById("vendeu").style.display = "none";
@@ -77,21 +74,67 @@
                             var sabsel = select.options[select.selectedIndex].value;
                             var quant_vend = document.getElementById('quant');
                             alert("Venda Registrada! sabor: " + sabsel + " Quantidade: " + qt);
-                            
                             window.location.reload();
                         }
-                    }                               
-
-                    //objetos
-                    function Vender(sabor, quantidade){
-                        this.sabor = sabor;
-                        this.quantidade = quantidade;
                     }
-        
+     
                 </script> 
+                
+            <p>Estoque: <br></p>
+                
+        <table>
+                
+                <thead>
+                    <tr>
+                        <th>SABOR</th>                    
+                        <th>QUANTIDADE</th>                    
+                    </tr>                                 
+                </thead>
 
-
-                <div id = "vendeu">
+            <tbody id ="tbl">
+            <tr>  
+                <td>açaí</td>
+                <td id="num1">2</td>
+             </tr>     
+              <tr>  
+                <td>Coco</td>
+                <td id="num2">6</td>
+             </tr>
+             <tr>  
+                <td>Flocos</td>
+                <td id="num3">1</td>
+             </tr>   
+              <tr>  
+                <td>napolitano</td>
+                <td id="num4">0</td>
+             </tr>
+             <tr>  
+                <td>Chocolate</td>
+                <td id="num5">4</td>
+             </tr>   
+              <tr>  
+                <td>Amendoin</td>
+                <td id="num6">5</td>
+             </tr>  
+              <tr>  
+                <td>Maracuja</td>
+                <td id="num7">3</td>
+             </tr>   
+             <tr>  
+                <td>Limão</td>
+                <td id="num8">0</td>
+             </tr>
+             <tr>  
+                <td>Uva</td>
+                <td id="num9">3</td>
+             </tr> 
+             
+            </tbody>
+        </table>
+        
+        <input type ="button" value = "venda" id = "venda" onclick="exibe();">
+            
+            <div id = "vendeu">
                         <form action=" ">
                           <label for="sabores"> SABOR: </label>
                             <select id="sabor">
@@ -115,31 +158,16 @@
 
                 <input type ="submit" value ="CONFIRMAR" id="conf" onclick="firmou();">
                 </div>
+    
             
-            <p>Estoque: <br></p>
-                
-            <table>
-                
-                <thead>
-                    <tr>
-                        <th>SABOR</th>                    
-                        <th>QUANTIDADE</th>                    
-                    </tr>                                 
-                </thead>
-
-            <tbody id ="tbl">
-                <td>açaí</td>
-                <td>2</td>
-
-
-            </tbody>
-    
-                
-            </table>
-    
-            <form></form>
             <ul class="lista">                
                 <li>Adicionados recentemente: </li><br>
-            </ul>    
+            </ul>  
+            <script type="text/javascript">
+
+                document.getElementById('num1').style.color="#00FF00";
+                document.getElementById('num9').style.color="#00FF00";
+
+            </script>  
     </body>
 </html>
